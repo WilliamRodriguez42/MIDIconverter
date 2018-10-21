@@ -32,6 +32,8 @@ class MConv:
     S = (0.75, 0.25)
 
     def __init__(self, volume=0.5, sample_rate=44100):
+        self.volume = volume
+        self.sample_rate = sample_rate
         self.init()
 
         # This class will eventually allow the user to specify their own notes, so here is a dictionary of all possible notes to there frequencies

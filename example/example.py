@@ -34,13 +34,17 @@ a.terminate() # Terminate the converter
 
 
 
-a = MConv() # Do not read twice using the same MConv object, create a new one and read again
-a.text_file_accuracy = 64 # Must match the write accuracy
+
+# Now read from the text file we created
+#a.text_file_accuracy = 64 # Must match the write accuracy (Changing this value to something other than 64 will cause audio to speed up or slow down)
 
 a.read_text('Clean.txt', midi=True, wav=True)
+
+# Write to a new midi and wave file
 a.write_midi('Clean_2.mid')
 a.write_wave('Clean_2.wav')
 
+# Play the audio
 a.play()
 
 a.terminate() # Terminate the converter
